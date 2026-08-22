@@ -24,7 +24,7 @@ gh repo list | Select-String CmnWmiLib
 # CD
 cd D:\Github\Projects
 # フォルダが存在する場合は削除
-if (-Not (Test-Path -Path .\CmnWmiLib)){rmdir .\CmnWmiLib}
+if (Test-Path -Path .\CmnWmiLib){rmdir .\CmnWmiLib}
 # クローン実行
 git clone https://github.com/hide104y/CmnWmiLib.git
 ```
@@ -157,7 +157,7 @@ dotnet publish .\CmnWmiLib\CmnWmiLib\CmnWmiLib.csproj -c Release -o D:\Github\bi
 # CD
 cd D:\Github\Projects
 # フォルダが存在する場合は削除
-if (-Not (Test-Path -Path .\CmnWmiLib)){rmdir .\CmnWmiLib}
+if (Test-Path -Path .\CmnWmiLib){rmdir .\CmnWmiLib}
 # クローン実行
 git clone -b dotnet10 https://github.com/hide104y/CmnWmiLib.git
 ```
